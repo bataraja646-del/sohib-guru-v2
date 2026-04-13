@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pilih Kelas</title>
+  <title>Semester</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      text-align: center;
+      background: #0b2c33;
+      color: white;
+    }
+
+    h2 {
+      margin-top: 40px;
+    }
+
+    .btn {
+      margin: 10px;
+      padding: 15px 20px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      background: white;
+    }
+  </style>
 </head>
+<body>
 
-<body style="text-align:center; font-family:Arial; background:#0b1f2a; color:white;">
+<h2>Pilih Semester</h2>
 
-<h2>Pilih Kelas</h2>
+<p id="info"></p>
 
-<button onclick="pilihKelas(4)">Kelas 4</button>
-<button onclick="pilihKelas(5)">Kelas 5</button>
-<button onclick="pilihKelas(6)">Kelas 6</button>
+<button class="btn">Semester 1</button>
+<button class="btn">Semester 2</button>
 
 <script>
-function pilihKelas(kelas){
-  localStorage.setItem("kelas", kelas);
-  window.location.href = "/sohib-guru-v2/semester.html";
-}
+let kelas = localStorage.getItem("kelas");
+document.getElementById("info").innerText = "Kelas " + kelas;
 </script>
 
 </body>
