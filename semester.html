@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Pilih Semester</title>
+</head>
+
+<body style="background:#0b1f2a; color:white; text-align:center; font-family:Arial;">
+
+  <h1>Pilih Semester</h1>
+  <p id="infoKelas"></p>
+
+  <button onclick="pilihSemester('Semester 1')">Semester 1</button><br><br>
+  <button onclick="pilihSemester('Semester 2')">Semester 2</button>
+
+  <script>
+    // tampilkan kelas yang dipilih
+    const kelas = localStorage.getItem("kelas");
+    document.getElementById("infoKelas").innerText = "Kelas: " + kelas;
+
+    function pilihSemester(nama) {
+      localStorage.setItem("semester", nama);
+      window.location.href = "mapel.html";
+    }
+  </script>
+
+</body>
+</html>
