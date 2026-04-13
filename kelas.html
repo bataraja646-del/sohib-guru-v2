@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Pilih Kelas</title>
+</head>
+
+<body style="background:#0b1f2a; color:white; text-align:center; font-family:Arial;">
+
+  <h1>Pilih Kelas</h1>
+
+  <button onclick="pilihKelas('Kelas 1')">Kelas 1</button><br><br>
+  <button onclick="pilihKelas('Kelas 2')">Kelas 2</button><br><br>
+  <button onclick="pilihKelas('Kelas 3')">Kelas 3</button><br><br>
+  <button onclick="pilihKelas('Kelas 4')">Kelas 4</button><br><br>
+  <button onclick="pilihKelas('Kelas 5')">Kelas 5</button><br><br>
+  <button onclick="pilihKelas('Kelas 6')">Kelas 6</button>
+
+  <script>
+    function pilihKelas(nama) {
+      localStorage.setItem("kelas", nama);
+      window.location.href = "semester.html";
+    }
+  </script>
+
+</body>
+</html>
