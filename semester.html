@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Pilih Semester</title>
+  <title>Pilih Kelas</title>
 </head>
 
-<body style="background:#0b1f2a; color:white; text-align:center; font-family:Arial;">
+<body style="text-align:center; font-family:Arial; background:#0b1f2a; color:white;">
 
-  <h1>Pilih Semester</h1>
-  <p id="infoKelas"></p>
+<h2>Pilih Kelas</h2>
 
-  <button onclick="pilihSemester('Semester 1')">Semester 1</button><br><br>
-  <button onclick="pilihSemester('Semester 2')">Semester 2</button>
+<button onclick="pilihKelas(4)">Kelas 4</button>
+<button onclick="pilihKelas(5)">Kelas 5</button>
+<button onclick="pilihKelas(6)">Kelas 6</button>
 
-  <script>
-    // tampilkan kelas yang dipilih
-    const kelas = localStorage.getItem("kelas");
-    document.getElementById("infoKelas").innerText = "Kelas: " + kelas;
-
-    function pilihSemester(nama) {
-      localStorage.setItem("semester", nama);
-      window.location.href = "mapel.html";
-    }
-  </script>
+<script>
+function pilihKelas(kelas){
+  localStorage.setItem("kelas", kelas);
+  window.location.href = "/sohib-guru-v2/semester.html";
+}
+</script>
 
 </body>
 </html>
